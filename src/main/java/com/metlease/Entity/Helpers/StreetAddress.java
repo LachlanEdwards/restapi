@@ -12,12 +12,12 @@ public class StreetAddress {
     private AUState state;
     private Integer postcode;
 
-    public StreetAddress(int unit, int number, String street, StreetSuffix suffix, String locality, AUState state, int postcode) {
+    public StreetAddress(int unit, int number, String street, StreetSuffix suffix, String suburb, AUState state, int postcode) {
         this.unit = unit;
         this.number = number;
         this.streetname = street;
         this.suffix = suffix;
-        this.suburb = locality;
+        this.suburb = suburb;
         this.state = state;
         this.postcode = postcode;
     }

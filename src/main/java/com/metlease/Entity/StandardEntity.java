@@ -27,7 +27,7 @@ public class StandardEntity {
     private Integer number;
     private String streetname;
     private String suffix;
-    private String locality;
+    private String suburb;
     private String state;
     private Integer postcode;
     private String name;
@@ -99,7 +99,7 @@ public class StandardEntity {
     public StreetAddress getAddress() {
         StreetSuffix eSuffix = StreetSuffix.valueOf(suffix);
         AUState eState = AUState.valueOf(state);
-        return new StreetAddress(subunit, number, streetname, eSuffix, locality, eState, postcode);
+        return new StreetAddress(subunit, number, streetname, eSuffix, suburb, eState, postcode);
     }
 
     public void setAddress(StreetAddress address) {
@@ -107,7 +107,7 @@ public class StandardEntity {
         this.number = address.getNumber();
         this.streetname = address.getStreetName();
         this.suffix = address.getSuffix().toString();
-        this.locality = address.getSuburb();
+        this.suburb = address.getSuburb();
         this.state = address.getState().toString();
         this.postcode = address.getPostCode();
     }

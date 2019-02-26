@@ -17,7 +17,7 @@ import java.nio.charset.StandardCharsets;
 public class NewsService {
     public String getGAPIResponse(String q) {
         try {
-            URL url = new URL("https://gapi.xyz/api/v2/?q=" + URLEncoder.encode(q, StandardCharsets.UTF_8.name()) + "&max=3&token=440ab357af393afb834c0115e3b5c002");
+            URL url = new URL("https://gapi.xyz/api/v2/?q=" + URLEncoder.encode(q, StandardCharsets.UTF_8.name()) + "&max=10&country=au&token=440ab357af393afb834c0115e3b5c002");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
 

@@ -2,13 +2,10 @@ package com.metlease.Entity;
 
 import com.metlease.Service.*;
 import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Repository;
 import com.metlease.Enumerators.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.Optional;
 
 @Scope("prototype")
 @Entity
@@ -47,7 +44,7 @@ public class Building extends StandardEntity {
     private String lon;
     private String lat;
     @ManyToOne
-    private Scorecard scorecard;
+    private RatingCard ratingCard;
 
     public Integer getId() {
         return id;
@@ -180,11 +177,11 @@ public class Building extends StandardEntity {
         this.lat = lat;
     }
 
-    public Scorecard getScorecard() {
-        return scorecard;
+    public RatingCard getRatingCard() {
+        return ratingCard;
     }
 
-    public void setScorecard(Scorecard scorecard) {
-        this.scorecard = scorecard;
+    public void setRatingCard(RatingCard ratingCard) {
+        this.ratingCard = ratingCard;
     }
 }

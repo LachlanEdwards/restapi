@@ -1,22 +1,27 @@
 package com.metlease.Entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.context.annotation.Scope;
-import org.springframework.data.annotation.ReadOnlyProperty;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Repository
 @Scope("prototype")
 @Entity
-@Table(name = "Scorecard")
-public class Scorecard {
+@Table(name = "Building_Reviews")
+public class BuildingReview {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
-    @Transient
-    private int cumulative;
+    @ManyToOne
+    private Building building;
+    @ManyToOne
+    private User user;
+    private Date date;
+    private String comment;
+    private int aggregate;
     private int management;
     private int functionality;
     private int facilities;
@@ -24,10 +29,6 @@ public class Scorecard {
     private int culture;
     private int fittings;
     private int noise;
-    private int crime;
-    private int lifestyle;
-    private int commute;
-    private int schools;
 
     public int getId() {
         return id;
@@ -37,15 +38,12 @@ public class Scorecard {
         this.id = id;
     }
 
-    public int getCumulative() {
-        int[] scores = { management, functionality, facilities, neighbourhood, culture, fittings, noise, crime, lifestyle, commute, schools};
-        int sum = 0;
+    public int getAggregate() {
+        return aggregate;
+    }
 
-        for (int i = 0; i < scores.length; i++) {
-            sum = sum + scores[i];
-        }
-        cumulative = sum / scores.length;
-        return cumulative;
+    public void setAggregate(int aggregate) {
+        this.aggregate = aggregate;
     }
 
     public int getManagement() {
@@ -104,35 +102,35 @@ public class Scorecard {
         this.noise = noise;
     }
 
-    public int getCrime() {
-        return crime;
+    public Building getBuilding() {
+        return building;
     }
 
-    public void setCrime(int crime) {
-        this.crime = crime;
+    public void setBuilding(Building building) {
+        this.building = building;
     }
 
-    public int getLifestyle() {
-        return lifestyle;
+    public User getUser() {
+        return user;
     }
 
-    public void setLifestyle(int lifestyle) {
-        this.lifestyle = lifestyle;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public int getCommute() {
-        return commute;
+    public Date getDate() {
+        return date;
     }
 
-    public void setCommute(int commute) {
-        this.commute = commute;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public int getSchools() {
-        return schools;
+    public String getComment() {
+        return comment;
     }
 
-    public void setSchools(int schools) {
-        this.schools = schools;
+    public void setComment(String comment) {
+        this.comment = comment;
     }
 }
