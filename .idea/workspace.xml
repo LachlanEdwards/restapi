@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45e5b4b6-dc7e-4f93-888f-ef0a456e8770" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Entity/BuildingReviewPayload.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Entity/RatingCard.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Repository/BuildingReviewRepository.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/metlease/Controller/AuthController.java" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Controller/AuthController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/metlease/Controller/BuildingController.java" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Controller/BuildingController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metlease/Entity/Building.java" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Entity/Building.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metlease/Entity/Helpers/StreetAddress.java" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Entity/Helpers/StreetAddress.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metlease/Entity/Scorecard.java" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Entity/BuildingReview.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metlease/Entity/StandardEntity.java" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Entity/StandardEntity.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metlease/Repository/ForLeaseRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Repository/ForLeaseRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metlease/Repository/ForSaleRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Repository/ForSaleRepository.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metlease/Service/BuildingService.java" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Service/BuildingService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metlease/Service/NewsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/metlease/Service/NewsService.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/metlease/Controller/BuildingController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/metlease/Entity/Building.class" afterPath="$PROJECT_DIR$/target/classes/com/metlease/Entity/Building.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/metlease/Entity/Helpers/StreetAddress.class" afterPath="$PROJECT_DIR$/target/classes/com/metlease/Entity/Helpers/StreetAddress.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/metlease/Entity/Scorecard.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/metlease/Entity/StandardEntity.class" afterPath="$PROJECT_DIR$/target/classes/com/metlease/Entity/StandardEntity.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/metlease/Repository/ForLeaseRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/metlease/Repository/ForLeaseRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/metlease/Repository/ForSaleRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/metlease/Repository/ForSaleRepository.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/metlease/Service/BuildingService.class" afterPath="$PROJECT_DIR$/target/classes/com/metlease/Service/BuildingService.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,83 +31,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildingController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/BuildingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="77" column="67" lean-forward="false" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationUserRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Repository/ApplicationUserRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuildingService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Service/BuildingService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-139">
-              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationUserDetailsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Service/ApplicationUserDetailsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BuildingReviewRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Repository/BuildingReviewRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="74" lean-forward="true" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1551153112972" expanded="true" signature="738:1043" ph="INSERT INTO Building_Reviews... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ApplicationUserDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Config/ApplicationUserDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NewsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/NewsController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -138,11 +41,83 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewsService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BuildingReview.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Entity/BuildingReview.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-174">
+              <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuildingReviewPayload.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Entity/BuildingReviewPayload.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/AdController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgencyController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/AgencyController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuildingController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/BuildingController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="78" column="62" lean-forward="true" selection-start-line="78" selection-start-column="62" selection-end-line="78" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/AuthController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Service/NewsService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="19" column="135" lean-forward="false" selection-start-line="19" selection-start-column="135" selection-end-line="19" selection-end-column="135" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Service/UserService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -190,7 +165,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/metlease/Config/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metlease/Config/ConfigConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metlease/Config/WebSecurity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/metlease/Controller/AuthController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metlease/Enumerators/BuildingClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metlease/Enumerators/BuildingCost.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metlease/Enumerators/BuildingDensity.java" />
@@ -232,8 +206,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/metlease/Service/BuildingService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metlease/Repository/BuildingReviewRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metlease/Service/ApplicationUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/metlease/Controller/BuildingController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metlease/Service/NewsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/metlease/Controller/BuildingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/metlease/Controller/AuthController.java" />
       </list>
     </option>
   </component>
@@ -715,12 +690,12 @@
       <workItem from="1546488427105" duration="19267000" />
       <workItem from="1549287204095" duration="2941000" />
       <workItem from="1549428095108" duration="29360000" />
-      <workItem from="1551149424753" duration="5873000" />
+      <workItem from="1551149424753" duration="6442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157131000" />
+    <option name="totallyTimeSpent" value="157700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -829,20 +804,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Enumerators/StreetSuffix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Enumerators/ReviewClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Enumerators/BuildingFeature.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -933,26 +894,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="36" lean-forward="false" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1067,22 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Entity/BuildingReview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Entity/BuildingReviewPayload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Config/AuthorizationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1176,16 +1105,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/BuildingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="77" column="67" lean-forward="false" selection-start-line="77" selection-start-column="67" selection-end-line="77" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1214,6 +1133,64 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="19" column="135" lean-forward="false" selection-start-line="19" selection-start-column="135" selection-end-line="19" selection-end-column="135" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Entity/BuildingReview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-174">
+          <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Entity/BuildingReviewPayload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="80" column="0" lean-forward="true" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/AdController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/BuildingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="78" column="62" lean-forward="true" selection-start-line="78" selection-start-column="62" selection-end-line="78" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/AgencyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metlease/Controller/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
           <folding />
         </state>
       </provider>

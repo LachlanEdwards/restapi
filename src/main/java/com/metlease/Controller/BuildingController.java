@@ -76,7 +76,7 @@ public class BuildingController {
 
         int aggregate = aggregateAlgorithm(management, functionality, facilities, neighbourhood, culture, fittings, noise);
         service.insertBuildingReviewByBuildingId(uid, userDetailsId, aggregate, management, functionality, facilities, neighbourhood, culture, fittings, noise, buildingReviewPayload.getComment());
-        return "success";
+        return "OK. User ID " + userDetailsId + " assigned to review.";
 
     }
 

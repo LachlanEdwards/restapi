@@ -41,7 +41,7 @@ public class AuthController {
 
     @RequestMapping(method = RequestMethod.GET, value = "", produces = "application/json")
     public String authenticated() {
-        return "false";
+        return "NOT OK. Authenticated User not present. Present a Bearer Token to authorise the API.";
     }
 
 }
