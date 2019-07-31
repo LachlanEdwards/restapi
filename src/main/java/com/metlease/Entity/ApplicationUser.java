@@ -28,7 +28,7 @@ public class ApplicationUser {
     private int role;
     private Date birthday;
     private String password;
-
+    private Integer building_id;
 
     public Integer getId() {
         return id;
@@ -36,6 +36,14 @@ public class ApplicationUser {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getBuilding() {
+        return building_id;
+    }
+
+    public void setBuilding(Integer buildingId) {
+        this.building_id = buildingId;
     }
 
     public String getUsername() {

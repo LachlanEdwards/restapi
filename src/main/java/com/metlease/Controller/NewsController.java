@@ -6,7 +6,6 @@ import com.metlease.Entity.User;
 import com.metlease.Service.BuildingService;
 import com.metlease.Service.NewsService;
 import com.metlease.Service.UserService;
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.PathVariable;

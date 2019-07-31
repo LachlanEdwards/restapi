@@ -4,6 +4,7 @@ import com.metlease.Entity.ApplicationUser;
 import com.metlease.Entity.User;
 import com.metlease.Exceptions.SIDException;
 import com.metlease.Repository.ApplicationUserRepository;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
@@ -32,5 +33,13 @@ public class UserService {
 
     public Iterable<User> getByCriteria(String criteria) {
         return userRepository.findAll();
+    }
+
+    public User updateUser(User user, int uid) {
+        Optional<User> repositoryUser = userRepository.findById(user.getId());
+        User update = user;
+        BeanUtils.copyProperties(repositoryUser, update);
+        userRepository.save(update);
+        return update;
     }
 }

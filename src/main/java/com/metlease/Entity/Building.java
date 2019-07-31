@@ -1,50 +1,90 @@
 package com.metlease.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.metlease.Entity.Helpers.Mean;
 import com.metlease.Service.*;
+import org.hibernate.validator.constraints.URL;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import com.metlease.Enumerators.*;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.NumberFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.Optional;
 
 @Scope("prototype")
 @Entity
 @Table(name = "Buildings")
 public class Building extends StandardEntity {
     @Transient
-    ContractorService contractorService;
-    @Transient
-    DeveloperService developerService;
-    @Transient
-    ManagementService managementService;
-    @Transient
-    AgentService agentService;
-    @Transient
-    AgencyService agencyService;
+    @Autowired
+    BuildingService buildingService;
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
-    private Integer contractor;
-    private Integer developer;
-    private Integer agent;
-    private Integer agency;
-    private Integer management;
-    private Date build;
-    private String name;
+
+    @NotNull
+    @Size(min=2, max=255)
+    private String contractor;
+
+    @NotNull
+    @Size(min=2, max=255)
+    private String developer;
+
+    @NotNull
+    @Size(min=2, max=255)
+    private String management;
+
+    @NotNull
+    @Past
+    private Date buildDate;
+
+    @Transient
+    private Double mean;
+
     @Enumerated(EnumType.STRING)
-    private BuildingClass buildingClass; //enum
+    @NotNull
+    private BuildingClass buildingClass;
+
     @Enumerated(EnumType.STRING)
-    private BuildingCost buildingCost; //enum
+    @NotNull
+    private BuildingCost buildingCost;
+
     @Enumerated(EnumType.STRING)
-    private BuildingDensity buildingDensity; //enum
-    private String plan;
-    private Integer features; //relationship
-    private Float er;
-    private String lon;
-    private String lat;
-    @ManyToOne
-    private RatingCard ratingCard;
+    @NotNull
+    private BuildingDensity buildingDensity;
+
+    @Size(min=2, max=255)
+    @URL
+    private String pda;
+
+    @NotNull
+    @Size(min=2, max=999)
+    private String features;
+
+    @Size(min=2, max=255)
+    private String masterPlan;
+
+    @NotNull
+    @NumberFormat(style= NumberFormat.Style.DEFAULT)
+    private Float environmentRating;
+
+    @NotNull
+    @NumberFormat(style= NumberFormat.Style.DEFAULT)
+    private Integer towers;
+
+    @NotNull
+    @NumberFormat(style= NumberFormat.Style.DEFAULT)
+    private Integer floors;
+
+    private String longitude;
+    private String latitude;
 
     public Integer getId() {
         return id;
@@ -54,70 +94,52 @@ public class Building extends StandardEntity {
         this.id = id;
     }
 
-    @Override
-    public String getName() {
-        return name;
+    public Double getMean() {
+        return mean;
     }
 
-    @Override
-    public void setName(String name) {
-        this.name = name;
+    public void setMean(Double mean) {
+        this.mean = mean;
     }
 
-    /*public Optional<Contractor> getContractor() {
-        return contractorService.getById(contractor);
+    public String getContractor() {
+        return contractor;
     }
 
-    public void setContractor(Contractor contractor) {
-        this.contractor = contractor.getId();
+    public void setContractor(String contractor) {
+        this.contractor = contractor;
     }
 
-    public Optional<Developer> getDeveloper() {
-        return developerService.getById(developer);
+    public String getDeveloper() {
+        return developer;
     }
 
-    public void setDeveloper(Developer developer) {
-        this.developer = developer.getId();
+    public void setDeveloper(String developer) {
+        this.developer = developer;
     }
 
-    public Optional<Management> getManagement() {
-        return managementService.getById(management);
+    public String getManagement() {
+        return management;
     }
 
-    public void setManagement(Management management) {
-        this.management = management.getId();
+    public void setManagement(String management) {
+        this.management = management;
     }
 
-    public Optional<Agent> getAgent() {
-        return agentService.getById(agent);
+    public Date getBuildDate() {
+        return buildDate;
     }
 
-    public void setAgent(Agent agent) {
-        this.agent = agent.getId();
+    public void setBuildDate(Date buildDate) {
+        this.buildDate = buildDate;
     }
 
-    public Optional<Agency> getAgency() {
-        return agencyService.getById(agency);
+    public String getPda() {
+        return pda;
     }
 
-    public void setAgency(Agency agency) {
-        this.agency = agency.getId();
-    }*/
-
-    public Date getBuild() {
-        return build;
-    }
-
-    public void setBuild(Date build) {
-        this.build = build;
-    }
-
-    public String getPlan() {
-        return plan;
-    }
-
-    public void setPlan(String plan) {
-        this.plan = plan;
+    public void setPda(String pda) {
+        this.pda = pda;
     }
 
     public String getBuildingClass() {
@@ -144,44 +166,64 @@ public class Building extends StandardEntity {
         this.buildingCost = buildingCost;
     }
 
-    public int getFeatures() {
+    public String getFeatures() {
         System.out.println(features);
         return features;
     }
 
-    public void setFeatures(int features) {
+    public void setFeatures(String features) {
         this.features = features;
     }
 
-    public float getEr() {
-        return er;
+    public float getEnvironmentRating() {
+        return environmentRating;
     }
 
-    public void setEr(float er) {
-        this.er = er;
+    public void setEnvironmentRating(float environmentRating) {
+        this.environmentRating = environmentRating;
     }
 
-    public String getLon() {
-        return lon;
+    public String getLongitude() {
+        return longitude;
     }
 
-    public void setLon(String lon) {
-        this.lon = lon;
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
     }
 
-    public String getLat() {
-        return lat;
+    public String getLatitude() {
+        return latitude;
     }
 
-    public void setLat(String lat) {
-        this.lat = lat;
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
     }
 
-    public RatingCard getRatingCard() {
-        return ratingCard;
+    public String getMasterPlan() {
+        return masterPlan;
     }
 
-    public void setRatingCard(RatingCard ratingCard) {
-        this.ratingCard = ratingCard;
+    public void setMasterPlan(String masterPlan) {
+        this.masterPlan = masterPlan;
+    }
+
+    public void setEnvironmentRating(Float environmentRating) {
+        this.environmentRating = environmentRating;
+    }
+
+    public Integer getTowers() {
+        return towers;
+    }
+
+    public void setTowers(Integer towers) {
+        this.towers = towers;
+    }
+
+    public Integer getFloors() {
+        return floors;
+    }
+
+    public void setFloors(Integer floors) {
+        this.floors = floors;
     }
 }

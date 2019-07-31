@@ -1,52 +1,84 @@
 package com.metlease.Entity.Helpers;
 
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 import com.metlease.Enumerators.AUState;
 import com.metlease.Enumerators.StreetSuffix;
 
+@JsonPOJOBuilder(buildMethodName = "create", withPrefix = "set")
 public class StreetAddress {
-    private Integer unit;
+    private String unit;
     private Integer number;
-    private String streetname;
+    private String street_name;
     private StreetSuffix suffix;
     private String suburb;
     private AUState state;
-    private Integer postcode;
+    private Integer post_code;
 
-    public StreetAddress(int unit, int number, String street, StreetSuffix suffix, String suburb, AUState state, int postcode) {
+    public StreetAddress(String unit, int number, String street, StreetSuffix suffix, String suburb, AUState state, int postcode) {
         this.unit = unit;
         this.number = number;
-        this.streetname = street;
+        this.street_name = street;
         this.suffix = suffix;
         this.suburb = suburb;
         this.state = state;
-        this.postcode = postcode;
+        this.post_code = postcode;
     }
 
-    public Integer getUnit() {
+    public StreetAddress() {}
+
+    public String getUnit() {
         return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
     public Integer getNumber() {
         return number;
     }
 
-    public String getStreetName() {
-        return streetname;
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 
-    public String getSuffix() {
-        return suffix.toString();
+    public String getStreetName() {
+        return street_name;
+    }
+
+    public void setStreetName(String street_name) {
+        this.street_name = street_name;
+    }
+
+    public StreetSuffix getSuffix() {
+        return suffix;
+    }
+
+    public void setSuffix(StreetSuffix suffix) {
+        this.suffix = suffix;
     }
 
     public String getSuburb() {
         return suburb;
     }
 
+    public void setSuburb(String suburb) {
+        this.suburb = suburb;
+    }
+
     public AUState getState() {
         return state;
     }
 
+    public void setState(AUState state) {
+        this.state = state;
+    }
+
     public Integer getPostCode() {
-        return postcode;
+        return post_code;
+    }
+
+    public void setPostCode(Integer post_code) {
+        this.post_code = post_code;
     }
 }

@@ -9,7 +9,7 @@ import java.util.Date;
 @Repository
 @Scope("prototype")
 @Entity
-@Table(name = "Apartment")
+@Table(name = "Apartments")
 public class Apartment {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -21,10 +21,6 @@ public class Apartment {
     private String description;
     @ManyToOne
     private Building building;
-    /*@ManyToOne
-    private Agent agent;
-    @ManyToOne
-    private Agency agency;*/
     private String value;
     private String features;
     private String images;

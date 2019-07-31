@@ -4,11 +4,8 @@ import com.metlease.Enumerators.UserRole;
 import com.metlease.Enumerators.UserGender;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Repository;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import javax.persistence.*;
 
 import java.util.Date;
 import java.sql.*;
@@ -30,6 +27,8 @@ public class User {
     private int role;
     private Date birthday;
     private String username;
+    @ManyToOne
+    private Building building;
 
     public Integer getId() {
         return id;
@@ -37,6 +36,15 @@ public class User {
     public void setId(Integer id) {
         this.id = id;
     }
+
+    public Building getBuilding() {
+        return building;
+    }
+
+    public void setBuilding(Building building) {
+        this.building = building;
+    }
+
     public String getUsername() {
         return username;
     }

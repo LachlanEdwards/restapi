@@ -1,19 +1,14 @@
 package com.metlease.Controller;
 
 import com.metlease.Entity.ApplicationUser;
+import com.metlease.Entity.Helpers.HTTP.Error;
+import com.metlease.Entity.Helpers.HTTP.Error401;
 import com.metlease.Repository.ApplicationUserRepository;
 import com.metlease.Service.UserService;
-import io.jsonwebtoken.Jwts;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
-import org.springframework.security.authentication.AnonymousAuthenticationToken;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
-import static com.metlease.Config.ConfigConstants.HEADER_STRING;
-import static com.metlease.Config.ConfigConstants.SECRET;
-import static com.metlease.Config.ConfigConstants.TOKEN_PREFIX;
 
 @RestController
 @Scope("prototype")
@@ -40,8 +35,8 @@ public class AuthController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "", produces = "application/json")
-    public String authenticated() {
-        return "NOT OK. Authenticated User not present. Present a Bearer Token to authorise the API.";
+    public Error authenticated() {
+        return new Error401();
     }
 
 }

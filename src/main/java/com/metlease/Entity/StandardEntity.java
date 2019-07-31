@@ -1,36 +1,71 @@
 package com.metlease.Entity;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.metlease.Entity.Helpers.StreetAddress;
 import com.metlease.Enumerators.AUState;
 import com.metlease.Enumerators.StreetSuffix;
 import com.metlease.Service.UserService;
+import org.hibernate.validator.constraints.URL;
 
-import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
-import java.util.Optional;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @MappedSuperclass
 public class StandardEntity {
     @Transient
     UserService userService;
 
+    @NotNull
+    @Size(min=2, max=255)
+    @Email
     private String mail;
+
+    @NotNull
+    @Size(min=2, max=255)
     private String phone;
+
     private String image;
+
+    @NotNull
+    @Size(min=2, max=255)
+    @URL
     private String website;
-    private Integer rating;
+
+    @NotNull
+    @Size(min=2, max=999)
     private String description;
-    @ManyToOne
-    private User admin;
-    private Integer subunit;
-    private Integer number;
-    private String streetname;
-    private String suffix;
-    private String suburb;
-    private String state;
-    private Integer postcode;
+
+    private Integer admin_id;
+
+    @NotNull
+    @Size(min=2, max=255)
     private String name;
+
+    @Size(min=2, max=255)
+    private String unit;
+
+    @NotNull
+    private Integer number;
+
+    @NotNull
+    @Size(min=2, max=255)
+    private String street_name;
+
+    @NotNull
+    private StreetSuffix suffix;
+
+    @NotNull
+    @Size(min=2, max=255)
+    private String suburb;
+
+    @NotNull
+    private AUState state;
+
+    @NotNull
+    private Integer post_code;
 
     public String getName() {
         return name;
@@ -38,14 +73,6 @@ public class StandardEntity {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Integer getRating() {
-        return rating;
-    }
-
-    public void setRating(Integer rating) {
-        this.rating = rating;
     }
 
     public String getDescription() {
@@ -88,27 +115,28 @@ public class StandardEntity {
         this.website = website;
     }
 
-    public User getAdmin() {
-        return admin;
+    public Integer getAdmin() {
+        return admin_id;
     }
 
-    public void setAdmin(User id) {
-        this.admin = id;
+    public void setAdmin(Integer adminId) {
+        this.admin_id = adminId;
     }
 
     public StreetAddress getAddress() {
-        StreetSuffix eSuffix = StreetSuffix.valueOf(suffix);
-        AUState eState = AUState.valueOf(state);
-        return new StreetAddress(subunit, number, streetname, eSuffix, suburb, eState, postcode);
+        //StreetSuffix eSuffix = StreetSuffix.valueOf(suffix);
+        //AUState eState = AUState.valueOf(state);
+        return new StreetAddress(unit, number, street_name, suffix, suburb, state, post_code);
     }
 
+    @JsonDeserialize(builder = StreetAddress.class)
     public void setAddress(StreetAddress address) {
-        this.subunit = address.getUnit();
+        this.unit = address.getUnit();
         this.number = address.getNumber();
-        this.streetname = address.getStreetName();
-        this.suffix = address.getSuffix().toString();
+        this.street_name = address.getStreetName();
+        this.suffix = address.getSuffix();
         this.suburb = address.getSuburb();
-        this.state = address.getState().toString();
-        this.postcode = address.getPostCode();
+        this.state = address.getState();
+        this.post_code = address.getPostCode();
     }
 }
